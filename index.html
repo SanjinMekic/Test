@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predikcija uspješnosti na fakultetu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Predikcija uspješnosti na fakultetu</h1>
+    <h3>Made by: Sarah Mekić</h3>
+    <form id="inputForm">
+      <label for="hoursStudied">Broj sati učenja nedeljno (1-44):</label>
+      <input type="number" min="1" max="44" id="hoursStudied" required />
+
+      <label for="attendance">Procenat prisustva na časovima (60-100):</label>
+      <input type="number" min="60" max="100" id="attendance" required />
+
+      <label for="parentalInvolvement">Nivo roditeljskog angažmana:</label>
+      <select id="parentalInvolvement" required>
+        <option value="Low">Nizak</option>
+        <option value="Medium">Srednji</option>
+        <option value="High">Visok</option>
+      </select>
+
+      <label for="accessToResources">Dostupnost obrazovnih resursa:</label>
+      <select id="accessToResources" required>
+        <option value="Low">Nizak</option>
+        <option value="Medium">Srednji</option>
+        <option value="High">Visok</option>
+      </select>
+
+      <label for="extracurricularActivities"
+        >Učestvovanje u vanškolskim aktivnostima:</label
+      >
+      <select id="extracurricularActivities" required>
+        <option value="Yes">Da</option>
+        <option value="No">Ne</option>
+      </select>
+
+      <label for="sleepHours">Prosječan broj sati sna po noći (4-10):</label>
+      <input type="number" min="4" max="10" id="sleepHours" required />
+
+      <label for="previousScores">Uspjeh u srednjoj školi (50-100):</label>
+      <input type="number" min="50" max="100" id="previousScores" required />
+
+      <label for="motivationLevel">Nivo motivacije:</label>
+      <select id="motivationLevel" required>
+        <option value="Low">Nizak</option>
+        <option value="Medium">Srednji</option>
+        <option value="High">Visok</option>
+      </select>
+
+      <label for="internetAccess">Pristup internetu:</label>
+      <select id="internetAccess" required>
+        <option value="Yes">Da</option>
+        <option value="No">Ne</option>
+      </select>
+
+      <label for="tutoringSessions"
+        >Broj časova instrukcija mjesečno (0-8):</label
+      >
+      <input type="number" min="0" max="8" id="tutoringSessions" required />
+
+      <label for="familyIncome">Nivo prihoda porodice:</label>
+      <select id="familyIncome" required>
+        <option value="Low">Nizak</option>
+        <option value="Medium">Srednji</option>
+        <option value="High">Visok</option>
+      </select>
+
+      <label for="teacherQuality">Kvalitet profesora:</label>
+      <select id="teacherQuality" required>
+        <option value="Low">Nizak</option>
+        <option value="Medium">Srednji</option>
+        <option value="High">Visok</option>
+      </select>
+
+      <label for="schoolType">Vrsta škole:</label>
+      <select id="schoolType" required>
+        <option value="Public">Javna</option>
+        <option value="Private">Privatna</option>
+      </select>
+
+      <label for="peerInfluence">Uticaj vršnjaka:</label>
+      <select id="peerInfluence" required>
+        <option value="Positive">Pozitivan</option>
+        <option value="Neutral">Neutralan</option>
+        <option value="Negative">Negativan</option>
+      </select>
+
+      <label for="physicalActivity"
+        >Broj sati fizičke aktivnosti nedeljno (0-6):</label
+      >
+      <input type="number" min="0" max="6" id="physicalActivity" required />
+
+      <label for="learningDisabilities">Poteškoće u učenju:</label>
+      <select id="learningDisabilities" required>
+        <option value="Yes">Da</option>
+        <option value="No">Ne</option>
+      </select>
+
+      <label for="parentalEducationLevel"
+        >Najviši nivo obrazovanja roditelja:</label
+      >
+      <select id="parentalEducationLevel" required>
+        <option value="High School">Srednja škola</option>
+        <option value="College">Fakultet</option>
+        <option value="Postgraduate">Postdiplomski</option>
+      </select>
+
+      <label for="distanceFromHome">Udaljenost od kuće do škole:</label>
+      <select id="distanceFromHome" required>
+        <option value="Near">Blizu</option>
+        <option value="Moderate">Umereno</option>
+        <option value="Far">Daleko</option>
+      </select>
+
+      <label for="gender">Spol studenta:</label>
+      <select id="gender" required>
+        <option value="Male">Muški</option>
+        <option value="Female">Ženski</option>
+      </select>
+
+      <button type="submit">Predvidi rezultat</button>
+    </form>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="popup-text"></span>
+        <button id="closePopup">OK</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
